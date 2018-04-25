@@ -65,18 +65,18 @@ Refer : [Setup Ruby On Rails on Ubuntu](https://gorails.com/setup/ubuntu/16.04)
     
     sudo apt install -y redis-server
 
-### 3. Install MySQL
+### 5. Install MySQL
 
     sudo apt-get install software-properties-common 
     sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
     sudo apt-get update
     sudo apt-get install mysql-server-5.6 redis-server libmysqlclient-dev
     
-### 4. Install Redis
+### 6. Install Redis
 
     sudo apt install -y redis-server 
 
-### 5. Install RabbitMQ
+### 7. Install RabbitMQ
 
 Please follow instructions here: https://www.rabbitmq.com/install-debian.html
 
@@ -103,7 +103,7 @@ Setup RabbitMQ Web Management Console
     chmod +x rabbitmqadmin
     sudo mv rabbitmqadmin /usr/local/sbin
 
-### 6. Install Bitcoind
+### 8. Install Bitcoind
 
     sudo add-apt-repository ppa:bitcoin/bitcoin
     sudo apt-get update
@@ -137,7 +137,7 @@ Insert the following lines into the bitcoin.conf, and replce with your username 
 
     bitcoind
 
-### 7. Installing Nginx & Passenger
+### 9. Installing Nginx & Passenger
 
 Install Phusion's PGP key to verify packages
 
@@ -178,7 +178,7 @@ and uncomment
 
     include  /etc/nginx/passenger.conf;
 
-### 8. Install JavaScript Runtime
+### 10. Install JavaScript Runtime
 
 A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do but Node.js is recommended.
 
@@ -186,12 +186,12 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
     sudo apt-get install nodejs
 
 
-### 9. Install ImageMagick
+### 11. Install ImageMagick
 
     sudo apt-get -y install imagemagick gsfonts
 
 
-### 10. Setup production environment variable
+### 12. Setup production environment variable
 
     echo "export RAILS_ENV=production" >> ~/.bashrc
     source ~/.bashrc

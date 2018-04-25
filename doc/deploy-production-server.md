@@ -225,7 +225,7 @@ More details to visit [pusher official website](http://pusher.com)
     # replace username:password and port with the one you set in
     # username and password should only contain letters and numbers, do not use email as username
     # bitcoin.conf in previous step
-    nano config/currencies.yml
+    sudo nano config/currencies.yml
 
 **Config database settings**
 

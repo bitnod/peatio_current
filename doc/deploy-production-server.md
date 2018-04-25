@@ -80,10 +80,22 @@ Refer : [Setup Ruby On Rails on Ubuntu](https://gorails.com/setup/ubuntu/16.04)
 
 Please follow instructions here: https://www.rabbitmq.com/install-debian.html
 
+    wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+    sudo dpkg -i erlang-solutions_1.0_all.deb
+    sudo apt-get update
+    sudo apt-get install erlang erlang-nox
     echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
     wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
     sudo apt-get update
     sudo apt-get install rabbitmq-server
+    
+Create Admin User in RabbitMQ
+ 
+    sudo rabbitmqctl add_user admin password 
+    sudo rabbitmqctl set_user_tags admin administrator
+    sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+    
+Setup RabbitMQ Web Management Console
 
     sudo rabbitmq-plugins enable rabbitmq_management
     sudo service rabbitmq-server restart

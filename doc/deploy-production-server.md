@@ -5,14 +5,15 @@ Deploy production server on Ubuntu 16.04
 
 1. Setup deploy user
 2. Install [Ruby](https://www.ruby-lang.org/en/)
-3. Install [MySQL](http://www.mysql.com/)
-4. Install [Redis](http://redis.io/)
-5. Install [RabbitMQ](https://www.rabbitmq.com/)
-6. Install [Bitcoind](https://en.bitcoin.it/wiki/Bitcoind)
-7. Install [Nginx with Passenger](https://www.phusionpassenger.com/)
-8. Install JavaScript Runtime
-9. Install ImageMagick
-10. Configure Peatio
+3. Install [Rails](https://gorails.com/setup/ubuntu/16.04)
+4. Install [MySQL](http://www.mysql.com/)
+5. Install [Redis](http://redis.io/)
+6. Install [RabbitMQ](https://www.rabbitmq.com/)
+7. Install [Bitcoind](https://en.bitcoin.it/wiki/Bitcoind)
+8. Install [Nginx with Passenger](https://www.phusionpassenger.com/)
+9. Install JavaScript Runtime
+10. Install ImageMagick
+11. Configure Peatio
 
 ### 1. Setup deploy user
 
@@ -59,6 +60,10 @@ Install bundler
     rbenv rehash
 
 Refer : [Setup Ruby On Rails on Ubuntu](https://gorails.com/setup/ubuntu/16.04)
+
+### 4. Install Rails
+    
+    sudo apt install -y redis-server
 
 ### 3. Install MySQL
 

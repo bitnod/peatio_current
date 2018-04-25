@@ -33,7 +33,7 @@ Make sure your system is up-to-date.
 
 Installing [rbenv](https://github.com/sstephenson/rbenv) using a Installer
 
-    sudo apt-get install git-core curl zlib1g-dev build-essential \
+    sudo apt-get install git-core curl nano zlib1g-dev build-essential \
                          libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 \
                          libxml2-dev libxslt1-dev libcurl4-openssl-dev \
                          python-software-properties libffi-dev
@@ -159,7 +159,7 @@ Install nginx and passenger
 
 Next, we need to update the Nginx configuration to point Passenger to the version of Ruby that we're using. You'll want to open up /etc/nginx/nginx.conf in your favorite editor,
 
-    sudo vim /etc/nginx/passenger.conf
+    sudo nano /etc/nginx/passenger.conf
 
 find the following lines, and uncomment them:
 
@@ -172,7 +172,7 @@ update the second line to read:
 
 we will alsp need to enable passenger in nginx config file
   
-    sudo vim /etc/nginx/nginx.conf 
+    sudo nano /etc/nginx/nginx.conf 
 
 and uncomment
 
@@ -218,18 +218,18 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 More details to visit [pusher official website](http://pusher.com)
 
     # uncomment Pusher related settings
-    vim config/application.yml
+    sudo nano config/application.yml
 
 **Setup bitcoind rpc endpoint**
 
     # replace username:password and port with the one you set in
     # username and password should only contain letters and numbers, do not use email as username
     # bitcoin.conf in previous step
-    vim config/currencies.yml
+    nano config/currencies.yml
 
 **Config database settings**
 
-    vim config/database.yml
+    sudo nano config/database.yml
 
     # Initialize the database and load the seed data
     bundle exec rake db:setup

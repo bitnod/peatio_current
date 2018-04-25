@@ -62,8 +62,11 @@ Refer : [Setup Ruby On Rails on Ubuntu](https://gorails.com/setup/ubuntu/16.04)
 
 ### 3. Install MySQL
 
-    sudo apt-get install mysql-server  mysql-client  libmysqlclient-dev
-
+    sudo apt-get install software-properties-common 
+    sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
+    sudo apt-get update
+    sudo apt-get install mysql-server-5.6 redis-server libmysqlclient-dev
+    
 ### 4. Install Redis
 
     sudo apt install -y redis-server 

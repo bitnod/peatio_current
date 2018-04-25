@@ -170,7 +170,7 @@ update the second line to read:
 
     passenger_ruby /home/deploy/.rbenv/shims/ruby;
 
-we will alsp need to enable passenger in nginx config file
+we will also need to enable passenger in nginx config file
   
     sudo nano /etc/nginx/nginx.conf 
 

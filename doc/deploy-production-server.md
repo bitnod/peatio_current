@@ -5,15 +5,14 @@ Deploy production server on Ubuntu 16.04
 
 1. Setup deploy user
 2. Install [Ruby](https://www.ruby-lang.org/en/)
-3. Install [Rails](https://gorails.com/setup/ubuntu/16.04)
-4. Install [MySQL](http://www.mysql.com/)
-5. Install [Redis](http://redis.io/)
-6. Install [RabbitMQ](https://www.rabbitmq.com/)
-7. Install [Bitcoind](https://en.bitcoin.it/wiki/Bitcoind)
-8. Install [Nginx with Passenger](https://www.phusionpassenger.com/)
-9. Install JavaScript Runtime
-10. Install ImageMagick
-11. Configure Peatio
+3. Install [MySQL](http://www.mysql.com/)
+4. Install [Redis](http://redis.io/)
+5. Install [RabbitMQ](https://www.rabbitmq.com/)
+6. Install [Bitcoind](https://en.bitcoin.it/wiki/Bitcoind)
+7. Install [Nginx with Passenger](https://www.phusionpassenger.com/)
+8. Install JavaScript Runtime
+9. Install ImageMagick
+10. Configure Peatio
 
 ### 1. Setup deploy user
 
@@ -61,22 +60,18 @@ Install bundler
 
 Refer : [Setup Ruby On Rails on Ubuntu](https://gorails.com/setup/ubuntu/16.04)
 
-### 3. Install Rails
-    
-    sudo apt install -y redis-server
-
-### 4. Install MySQL
+### 3. Install MySQL
 
     sudo apt-get install software-properties-common 
     sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
     sudo apt-get update
     sudo apt-get install mysql-server-5.6 redis-server libmysqlclient-dev
     
-### 5. Install Redis
+### 4. Install Redis
 
     sudo apt install -y redis-server 
 
-### 6. Install RabbitMQ
+### 5. Install RabbitMQ
 
 Please follow instructions here: https://www.rabbitmq.com/install-debian.html
 
@@ -103,7 +98,7 @@ Setup RabbitMQ Web Management Console
     chmod +x rabbitmqadmin
     sudo mv rabbitmqadmin /usr/local/sbin
 
-### 7. Install Bitcoind
+### 6. Install Bitcoind
 
     sudo add-apt-repository ppa:bitcoin/bitcoin
     sudo apt-get update
@@ -137,7 +132,7 @@ Insert the following lines into the bitcoin.conf, and replce with your username 
 
     bitcoind
 
-### 8. Installing Nginx & Passenger
+### 7. Installing Nginx & Passenger
 
 Install Phusion's PGP key to verify packages
 
@@ -178,7 +173,7 @@ and uncomment
 
     include  /etc/nginx/passenger.conf;
 
-### 9. Install JavaScript Runtime
+### 8. Install JavaScript Runtime
 
 A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do but Node.js is recommended.
 
@@ -186,12 +181,12 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
     sudo apt-get install nodejs
 
 
-### 10. Install ImageMagick
+### 9. Install ImageMagick
 
     sudo apt-get -y install imagemagick gsfonts
 
 
-### 11. Setup production environment variable
+### 10. Setup production environment variable
 
     echo "export RAILS_ENV=production" >> ~/.bashrc
     source ~/.bashrc

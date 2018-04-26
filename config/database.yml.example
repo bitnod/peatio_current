@@ -1,15 +1,20 @@
 development: &defaults
+  host: 127.0.0.1
   adapter: mysql2
   encoding: utf8
   database: exchange_development
   username: root
-  password: admin
+  password: your_password
   pool: 10
   reconnect: true
 
 test:
   <<: *defaults
   database: exchange_test
+  
+development:
+  <<: *defaults
+  database: exchange_development  
 
 production:
   <<: *defaults

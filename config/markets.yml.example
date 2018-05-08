@@ -4,27 +4,18 @@
   base_unit: btc
   quote_unit: cny
   #price_group_fixed: 1 # aggregate price levels in orderbook
-  bid: {fee: 0, currency: cny, fixed: 7}
+  bid: {fee: 0, currency: cny, fixed: 2}
   ask: {fee: 0, currency: btc, fixed: 7}
   sort_order: 1
   #visible: false     # default to true
-- id: ethcny
+
+- id: btcltc
   code: 4
-  name: ETH/CNY     
-  base_unit: eth
-  quote_unit: cny
-  #price_group_fixed: 1 # aggregate price levels in orderbook
-  bid: {fee: 0, currency: cny, fixed: 7}
-  ask: {fee: 0, currency: eth, fixed: 7}
-  sort_order: 1
-  #visible: false     # default to true
-- id: ethbtc
-  code: 5
-  name: ETH/BTC      
-  base_unit: eth
+  name: BTC/LTC     
+  base_unit: ltc
   quote_unit: btc
   #price_group_fixed: 1 # aggregate price levels in orderbook
   bid: {fee: 0, currency: btc, fixed: 7}
-  ask: {fee: 0, currency: eth, fixed: 7}
+  ask: {fee: 0, currency: ltc, fixed: 7}
   sort_order: 1
   #visible: false     # default to true
